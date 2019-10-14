@@ -1,5 +1,4 @@
 import Taro from '@tarojs/taro';
-import { hideLoading } from 'taro-util';
 import {
   ADD,
   MINUS
@@ -24,7 +23,7 @@ export function asyncAdd () {
   return dispatch => {
     setTimeout(() => {
       dispatch(add());
-      hideLoading();
+      Taro.hideLoading();
       // Taro.hideLoading();
     }, 2000)
   }
